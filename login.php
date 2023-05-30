@@ -2,26 +2,15 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
+    <!--Bostrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-    <style>
-        body,
-        html {
-            height: 100%;
-        }
+    <!--Custom CSS-->
+    <link rel="stylesheet" href="main.css">
 
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .card {
-            width: 350px;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 
 <body>
@@ -31,7 +20,7 @@
                 <h3 class="card-title text-center">Admin Login</h3>
                 <form>
                     <div class="form-group">
-                        <label for="username">Email</label>
+                        <label for="email">Email</label>
                         <input type="text" class="form-control" id="email" placeholder="Enter your Email">
                     </div>
                     <div class="form-group">
@@ -41,7 +30,7 @@
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                     <br>
                     <p><a href="forgot_password.php">Forgot password</a></p>
-                    <p>Do no have an Account <a href="#">Create Here</a></p>
+                    <p>Do not have an Account <a href="register.php">Register Here</a></p>
                 </form>
             </div>
         </div>

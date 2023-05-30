@@ -16,16 +16,23 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title text-center">Forgot Password</h3>
+                <h3 class="card-title text-center">Register Here</h3>
                 <form>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" class="form-control" id="email" placeholder="Enter your Email">
                     </div>
-
+                    <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" placeholder="Enter your Full Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                    </div>
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                     <br>
-                    <p><a href="login.php">Back to login</a></p>
+                    <p>Already have an Account <a href="login.php">Login Here</a></p>
                 </form>
             </div>
         </div>
