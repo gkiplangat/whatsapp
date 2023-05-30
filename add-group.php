@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard Page</title>
+    <title>add group</title>
     <!--Bostrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!--Custom CSS-->
@@ -16,23 +16,21 @@
     <div class="container">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title text-center">Blog Log!</h3>
+                <h3 class="card-title text-center">Group</h3>
                 <form action="add-user.php" method="POST">
                     <div class="form-group">
-                        <label for="text">Enter Secret Pin</label>
-                        <input type="text" class="form-control" name="email" placeholder="Enter your Secret Pin">
+                        <label for="text">Group Name</label>
+                        <input type="text" class="form-control" name="g-name" placeholder="Enter Group Name">
                     </div>
                     <div class="form-group">
-                        <label for="fullname">Full Name</label>
-                        <input type="text" class="form-control" name="fullname" placeholder="Enter your Full Name">
+                        <label for="fullname">Group Description</label>
+                        <input type="text" class="form-control" name="g-descript" placeholder="Enter Group Description">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                        <label for="group-link">Group Link</label>
+                        <input type="group-link" class="form-control" name="g-link" placeholder="Enter Group Link">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Register</button>
-                    <br>
-                    <p>Already have an Account <a href="login.php">Login Here</a></p>
+                    <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
             </div>
         </div>
