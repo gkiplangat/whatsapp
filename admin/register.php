@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container py-5">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title text-center">Register Here</h3>
@@ -29,6 +29,10 @@
                     <div class="form-group">
                         <label for="password">Password</label>
                         <input type="password" class="form-control" name="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-group">
+                        <label for="acc_code">Password</label>
+                        <input type="number" class="form-control" name="acc_code" placeholder="Enter your password">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Register</button>
                     <br>

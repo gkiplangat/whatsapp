@@ -4,12 +4,13 @@ include "../../dbconn.php";
 
 // Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (isset($_POST["email"]) && isset($_POST["fullname"]) && isset($_POST["password"])) {
+    if (isset($_POST["email"]) && isset($_POST["fullname"]) && isset($_POST["password"])&& isset($_POST["acc_code"]) ) {
 
         // Retrieve form data
         $email = $_POST["email"];
         $fullName = $_POST["fullname"];
         $password = $_POST["password"];
+        $acc_code = $_POST ["acc_code"];
 
         // Validate email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -27,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }else{
 
         // Prepare and execute the SQL statement
-        $stmt = $conn->prepare("INSERT INTO users (email, fullname, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $email, $fullName, $password);
+        $stmt = $conn->prepare("INSERT INTO users (email, fullname, password, acc_code) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $email, $fullName, $password, $acc_code);
         $stmt->execute();
 
         if ($stmt->affected_rows > 0) {
