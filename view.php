@@ -1,6 +1,6 @@
 <?php
 // Include database connection file
-include "../dbconn.php";
+include "dbconn.php";
 
 // Retrieve data from the database
 $sql = "SELECT * FROM whatsapp_groups";

@@ -9,7 +9,7 @@
     <!--Bostrap CDN-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <!--Custom CSS-->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../main.css">
 
 </head>
 
