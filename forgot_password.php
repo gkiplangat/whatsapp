@@ -32,13 +32,12 @@
                 <form>
                     <div class="form-group">
                         <label for="username">Email</label>
-                        <input type="text" class="form-control" id="username" placeholder="Enter your email">
+                        <input type="text" class="form-control" id="email" placeholder="Enter your Email">
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block">Login</button>
                     <br>
                     <p><a href="index.php">Back to login</a></p>
-                    <p>Do no have an Account <a href="#">Create Here</a></p>
                 </form>
             </div>
         </div>
