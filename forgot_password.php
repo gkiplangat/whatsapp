@@ -23,7 +23,7 @@
                         <input type="text" class="form-control" id="email" placeholder="Enter your Email">
                     </div>
 
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block">Send</button>
                     <br>
                     <p><a href="login.php">Back to login</a></p>
                 </form>

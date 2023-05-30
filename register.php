@@ -17,20 +17,20 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title text-center">Register Here</h3>
-                <form>
+                <form action="add-user.php" method="POST">
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" placeholder="Enter your Email">
+                        <input type="text" class="form-control" name="email" placeholder="Enter your Email">
                     </div>
                     <div class="form-group">
                         <label for="fullname">Full Name</label>
-                        <input type="text" class="form-control" id="fullname" placeholder="Enter your Full Name">
+                        <input type="text" class="form-control" name="fullname" placeholder="Enter your Full Name">
                     </div>
                     <div class="form-group">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                        <input type="password" class="form-control" name="password" placeholder="Enter your password">
                     </div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
+                    <button type="submit" class="btn btn-primary btn-block">Register</button>
                     <br>
                     <p>Already have an Account <a href="login.php">Login Here</a></p>
                 </form>
