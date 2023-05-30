@@ -17,7 +17,7 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title text-center">Register Here</h3>
-                <form action="add-user.php" method="POST">
+                <form action="includes/add-user.php" method="POST">
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="text" class="form-control" name="email" placeholder="Enter your Email">

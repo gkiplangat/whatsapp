@@ -17,18 +17,18 @@
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title text-center">Group</h3>
-                <form action="add-user.php" method="POST">
+                <form action="includes/add-group.php" method="POST">
                     <div class="form-group">
                         <label for="text">Group Name</label>
-                        <input type="text" class="form-control" name="g-name" placeholder="Enter Group Name">
+                        <input type="text" class="form-control" name="g_name" placeholder="Enter Group Name">
                     </div>
                     <div class="form-group">
                         <label for="fullname">Group Description</label>
-                        <input type="text" class="form-control" name="g-descript" placeholder="Enter Group Description">
+                        <input type="text" class="form-control" name="g_descript" placeholder="Enter Group Description">
                     </div>
                     <div class="form-group">
                         <label for="group-link">Group Link</label>
-                        <input type="group-link" class="form-control" name="g-link" placeholder="Enter Group Link">
+                        <input type="group-link" class="form-control" name="g_link" placeholder="Enter Group Link">
                     </div>
                     <button type="submit" class="btn btn-primary btn-block">Submit</button>
                 </form>
