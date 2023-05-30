@@ -1,3 +1,4 @@
+<?php include "../dbconn.php"  ?>
 <!DOCTYPE html>
 <html>
 
@@ -11,11 +12,7 @@
     <!-- Font Awesome CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- Custom CSS -->
-    <style>
-        .sidebar {
-            height: auto;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -25,9 +22,6 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <a class="nav-link text-light" href="manage-groups.php"><i class="fas fa-cogs"></i> Manage Groups</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link text-light" href="manage-groups.php"><i class="fas fa-cogs"></i> Settings</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-light" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -59,4 +53,5 @@
 
             <!-- Content -->
             <main role="main" class="col-md-10 ml-sm-auto">
-                <div class="container">
+                <div class="container py-5">
+                    

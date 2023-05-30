@@ -1,3 +1,5 @@
+<?php include "../dbconn.php" ?>
+
 <?php include "../dbconn.php"; ?>
 
 <!DOCTYPE html>
@@ -51,41 +53,36 @@
             <!-- Content -->
             <main role="main" class="col-md-10 ml-sm-auto">
                 <div class="container py-5">
-                    <?php
-                    $query = "SELECT * FROM whatsapp_groups";
-                    $query_run = mysqli_query($conn, $query);
-                    $check_groups = mysqli_num_rows($query_run) > 0;
+                    <div class="row">
+                        <?php
+                        $query = "SELECT * FROM whatsapp_groups";
+                        $query_run = mysqli_query($conn, $query);
+                        $check_groups = mysqli_num_rows($query_run) > 0;
 
-                    if ($check_groups) {
-                        while ($row = mysqli_fetch_array($query_run)) {
-                    ?>
-                            <div class="col-md-3">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <img src="../images/logo.jfif" width="250px" height="250px" alt="whatsapp group">
-                                        <h3 class="class-title"><?php echo $row["g_name"]; ?></h3>
-                                        <p class="class-text"><?php echo $row["g_descript"]; ?></p>
-                                        <h5 class="class-link"><a href="<?php echo $row["g_link"]; ?>">Join Here</a></h5>
+                        if ($check_groups) {
+                            while ($row = mysqli_fetch_array($query_run)) {
+                        ?>
+                                <div class="col-md-4">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <img src="../images/logo.jfif" width="250px" height="250px" alt="whatsapp group">
+                                            <h3 class="class-title"><?php echo $row["g_name"]; ?></h3>
+                                            <p class="class-text"><?php echo $row["g_descript"]; ?></p>
+                                            <h5 class="class-link"><a href="<?php echo $row["g_link"]; ?>">Join Here</a></h5>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                    <?php
+                        <?php
+                            }
+                        } else {
+                            echo "No Whatsapp Group Found!";
                         }
-                    } else {
-                        echo "No Whatsapp Group Found!";
-                    }
-                    ?>
+                        ?>
+                    </div>
                 </div>
             </main>
         </div>
     </div>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container text-center">
-            <p>&copy; <?php echo date("Y"); ?> Gideon Kiplangat. All rights reserved.</p>
-        </div>
-    </footer>
 
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

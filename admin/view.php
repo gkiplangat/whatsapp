@@ -22,36 +22,38 @@ $result = $conn->query($sql);
 <body>
     <div class="container">
         <h3 class="text-center">Group List</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Group Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                ?>
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Group Name</th>
+                        <th>Description</th>
+                        <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php
+                    if ($result->num_rows > 0) {
+                        while ($row = $result->fetch_assoc()) {
+                    ?>
+                            <tr>
+                                <td><?php echo $row["g_name"]; ?></td>
+                                <td><?php echo $row["g_descript"]; ?></td>
+                                <td><a href="<?php echo $row["g_link"]; ?>">Click Here</a></td>
+                            </tr>
+                        <?php
+                        }
+                    } else {
+                        ?>
                         <tr>
-                            <td><?php echo $row["g_name"]; ?></td>
-                            <td><?php echo $row["g_descript"]; ?></td>
-                            <td><a href="<?php echo $row["g_link"]; ?>">Click Here</a></td>
+                            <td colspan="3">No groups found</td>
                         </tr>
                     <?php
                     }
-                } else {
                     ?>
-                    <tr>
-                        <td colspan="3">No groups found</td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
     </div>
 </body>
 
