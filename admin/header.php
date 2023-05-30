@@ -13,31 +13,39 @@
     <!-- Custom CSS -->
     <style>
         .sidebar {
-            height: 100vh;
+            height: auto;
         }
     </style>
 </head>
 
 <body>
     <!-- Top Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-success bg-success">
+    <nav class="navbar navbar-expand navbar-success bg-success">
         <a class="navbar-brand text-light" href="home.php">Dashboard</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link text-light" href="manage-groups.php"><i class="fas fa-cogs"></i> Manage Groups</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="manage-groups.php"><i class="fas fa-cogs"></i> Settings</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-light" href="#"><i class="fas fa-sign-out-alt"></i> Logout</a>
+            </li>
+        </ul>
     </nav>
 
     <!-- Sidebar -->
     <div class="container-fluid">
         <div class="row">
-            <nav class="col-md-2 d-md-block sidebar bg-light">
-                <div class="sidebar-sticky">
+            <nav class="col-md-2 d-none d-md-block sidebar bg-light">
+                <div class="sidebar-">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+                            <a class="nav-link" href="home.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"><i class="fas fa-cogs"></i>Manage Groups</a>
+                            <a class="nav-link" href="manage-groups.php"><i class="fas fa-cogs"></i>Manage Groups</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#"><i class="fas fa-cogs"></i> Settings</a>

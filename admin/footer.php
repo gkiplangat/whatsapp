@@ -1,4 +1,10 @@
 </div>
+<footer class="footer">
+    <div class="container text-center">
+        <p>&copy; <?php echo date("Y"); ?> Gideon Kiplangat. All rights reserved.</p>
+    </div>
+</footer>
+
 </main>
 </div>
 </div>
