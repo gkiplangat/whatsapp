@@ -75,8 +75,14 @@ $result = $conn->query($sql);
                                 <td><?php echo $row["g_name"]; ?></td>
                                 <td><a href="<?php echo $row["g_link"]; ?>">Click Here</a></td>
                                 <td>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal<?php echo $row["id"]; ?>">Edit</button>
-                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal<?php echo $row["id"]; ?>">Delete</button>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal<?php echo $row["id"]; ?>">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteModal<?php echo $row["id"]; ?>">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+
+
                                 </td>
                             </tr>
 
