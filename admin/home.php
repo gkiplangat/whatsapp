@@ -12,9 +12,9 @@ include "header.php";
         while ($row = mysqli_fetch_array($query_run)) {
     ?>
             <div class="col-md-4">
-                <div class="card">
+                <div class="card text-center">
                     <div class="card-body">
-                        <img src="../images/logo.jfif" width="250px" height="250px" alt="whatsapp group">
+                        <img src="../images/logo.jfif" width="150px" height="150px" alt="whatsapp group">
                         <h3 class="class-title"><?php echo $row["g_name"]; ?></h3>
                         <p class="class-text"><?php echo $row["g_descript"]; ?></p>
                         <h5 class="class-link"><a href="<?php echo $row["g_link"]; ?>">Join Here</a></h5>
