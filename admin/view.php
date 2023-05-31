@@ -23,8 +23,40 @@ $result = $conn->query($sql);
     <div class="container">
         <h3 class="text-center">Manage Your WhatsApp Groups</h3>
         <div class="d-flex justify-content-end mb-3">
-            <a href="add-group.php" class="btn btn-primary">Add New Group</a>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addGroupModal">Add New Whatsapp Group</button>
         </div>
+
+        <!-- Add Group Modal -->
+        <div class="modal fade" id="addGroupModal" tabindex="-1" role="dialog" aria-labelledby="addGroupModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addGroupModalLabel">Add New Group</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form action="includes/add-group.php" method="POST">
+                            <div class="form-group">
+                                <label for="text">Group Name</label>
+                                <input type="text" class="form-control" name="g_name" placeholder="Enter Group Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="fullname">Group Description</label>
+                                <input type="text" class="form-control" name="g_descript" placeholder="Enter Group Description">
+                            </div>
+                            <div class="form-group">
+                                <label for="group-link">Group Link</label>
+                                <input type="text" class="form-control" name="g_link" placeholder="Enter Group Link">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
