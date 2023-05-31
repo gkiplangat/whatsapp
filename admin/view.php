@@ -21,7 +21,10 @@ $result = $conn->query($sql);
 
 <body>
     <div class="container">
-        <h3 class="text-center">Group List</h3>
+        <h3 class="text-center">Manage Your WhatsApp Groups</h3>
+        <div class="d-flex justify-content-end mb-3">
+            <a href="add-group.php" class="btn btn-primary">Add New Group</a>
+        </div>
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
