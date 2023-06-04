@@ -1,63 +1,36 @@
 <?php
-// Include database connection file
-include "dbconn.php";
-
-// Retrieve data from the database
-$sql = "SELECT * FROM whatsapp_groups";
-$result = $conn->query($sql);
+include "header.php";
 ?>
 
-<!DOCTYPE html>
-<html>
+<div class="row">
+    <?php
+    $query = "SELECT * FROM whatsapp_groups";
+    $query_run = mysqli_query($conn, $query);
+    $check_groups = mysqli_num_rows($query_run) > 0;
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group List</title>
-    <!-- Bootstrap CDN -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-</head>
+    if ($check_groups) {
+        while ($row = mysqli_fetch_array($query_run)) {
+    ?>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <img src="../images/logo.jfif" width="150px" height="150px" alt="whatsapp group">
+                        <h3 class="class-title"><?php echo $row["g_name"]; ?></h3>
+                        <p class="class-text"><?php echo $row["g_descript"]; ?></p>
+                        <h5 class="class-link"><a href="<?php echo $row["g_link"]; ?>">Join Here</a></h5>
+                    </div>
+                </div>
+            </div>
+    <?php
+        }
+    } else {
+        echo "No Whatsapp Group Found!";
+    }
+    ?>
+</div>
 
-<body>
-    <div class="container">
-        <h3 class="text-center">Group List</h3>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <th>Group Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php
-                if ($result->num_rows > 0) {
-                    while ($row = $result->fetch_assoc()) {
-                ?>
-                        <tr>
-                            <td><?php echo $row["g_name"]; ?></td>
-                            <td><?php echo $row["g_descript"]; ?></td>
-                            <td><a href="<?php echo $row["g_link"]; ?>">Click Here</a></td>
-                        </tr>
-                    <?php
-                    }
-                } else {
-                    ?>
-                    <tr>
-                        <td colspan="3">No groups found</td>
-                    </tr>
-                <?php
-                }
-                ?>
-            </tbody>
-        </table>
-    </div>
-</body>
 
-</html>
 
 <?php
-// Close the database connection
-$conn->close();
+include "footer.php";
 ?>
